@@ -40,8 +40,8 @@ Configuration is read from the following (in precedence order)
 | type.\<name>.extend-glob   | \-            | list of strings | \- | File globs for matching `<name>`. |
 
 Common `extend-ignore-re`:
-- Line ignore with trailing `# spellchecker:disable-line`: `"(?Rm)^.*(#|//)\\s*spellchecker:disable-line$"`
-- Line block with `# spellchecker:<on|off>`: `"(?s)(#|//)\\s*spellchecker:off.*?\\n\\s*(#|//)\\s*spellchecker:on"`
+- Line ignore with trailing `# spellchecker:disable-line`: `"(?Rm)^.*(?:#|//|%)\\s*spellchecker:disable-line$"`
+- Line block with `# spellchecker:<on|off>`: `"(?s)(?:#|//|%)\\s*spellchecker:off.*?\\n\\s*(?:#|//|%)\\s*spellchecker:on"`
 - See also [ripsecret's regexes](https://github.com/sirwart/ripsecrets/blob/main/src/lib.rs)
 
 Common `extend-ignore-identifiers-re`:
